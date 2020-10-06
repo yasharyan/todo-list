@@ -1,13 +1,14 @@
 import React from 'react'
-import TodoList from './Components/TodoList.js'
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import Rewritetodo from './Components/Rewritetodo.js'
+import './Components/Style.css'
 
 function App() {
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='col .inblock .justify-item-center'>
-                    <TodoList />
+
+        <div className="container">
+            <div className="row ">
+                <div className="col-sm-5 m-auto maincol">
+                    <Rewritetodo />
                 </div>
             </div>
         </div>
