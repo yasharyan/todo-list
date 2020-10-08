@@ -65,40 +65,42 @@ Provide some value or update as empty list.`)
 
     render() {
         return (
-            <div className="col-xs-11 m-auto pt-2">
-                <div className="row row-col-2">
-                    <input type="text"
+            <div>
+                <div className="row row-cols-2 m-auto pt-3">
+                    <input
+                        className="col-sm-8 m-sm-auto"
+                        type="text"
                         placeholder="Add item here."
                         value={this.state.item}
                         onChange={this.handlerUpdate}
-                        className="col col-sm-8 offset-1 mt-2 mb-3"
                         id="addinput"
                     />
-                    <button onClick={this.add} className="col col-sm-2 mt-2 mb-3 ml-2 buttonstyle">Add</button>
+                    <button onClick={this.add} className="col-sm-3 m-sm-auto buttonstyle">Add</button>
                 </div>
 
-                <ol className="col-md-11 m-auto mb-4">
-                    <div>
-                    {this.state.list.map(go => {
-                        return (
+                <ol className="col-sm-12 m-auto pt-3 ">
+                    <div className="col m-auto">
+                        {this.state.list.map(go => {
+                            return (
+                                <li className="col mb-3 mt-3 style" key={go.id}>
 
-                            <li className="col col-md-12 style" key={go.id}>
+                                    <input
+                                        className="col-sm-9 m-auto p-2 listdesign"
+                                        type="text"
+                                        value={go.value}
+                                        onChange={(e) => this.listhandler(e.target.value, go.id)}
+                                    ></input>
 
-
-                                <input type="text"
-                                    value={go.value}
-                                    onChange={(e) => this.listhandler(e.target.value, go.id)}
-                                    className="col col-md-8 m-auto listdesign"
-                                ></input>
-
-                                <button className="col-md-3" id="buttondelete"
-                                    onClick={() => this.delete(go.id)}>
-                                    Delete
+                                    <button
+                                        className="col-sm-3 m-sm-auto mb-2"
+                                        id="buttondelete"
+                                        onClick={() => this.delete(go.id)}>
+                                        Delete
                                     </button>
 
-                            </li>
-                        )
-                    })}
+                                </li>
+                            )
+                        })}
                     </div>
                 </ol>
             </div>

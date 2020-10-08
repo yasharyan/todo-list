@@ -7,7 +7,7 @@ function App() {
 
         <div className="container">
             <div className="row ">
-                <div className="col-sm-5 m-auto maincol">
+                <div className="col-sm-7 m-auto maincol">
                     <Rewritetodo />
                 </div>
             </div>
