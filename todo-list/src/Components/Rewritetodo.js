@@ -68,14 +68,14 @@ Provide some value or update as empty list.`)
             <div>
                 <div className="row row-cols-2 m-auto pt-3">
                     <input
-                        className="col-sm-8 m-sm-auto"
+                        className="col-sm-8 m-sm-auto p-2"
                         type="text"
                         placeholder="Add item here."
                         value={this.state.item}
                         onChange={this.handlerUpdate}
                         id="addinput"
                     />
-                    <button onClick={this.add} className="col-sm-3 m-sm-auto buttonstyle">Add</button>
+                    <button onClick={this.add} className="col-sm-3 m-sm-auto p-2 addbutton">Add</button>
                 </div>
 
                 <ol className="col-sm-12 m-auto pt-3 ">
@@ -92,7 +92,7 @@ Provide some value or update as empty list.`)
                                     ></input>
 
                                     <button
-                                        className="col-sm-3 m-sm-auto mb-2"
+                                        className="col-sm-3 m-sm-auto mb-3"
                                         id="buttondelete"
                                         onClick={() => this.delete(go.id)}>
                                         Delete
